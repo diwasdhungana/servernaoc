@@ -1,7 +1,7 @@
 const WebSocket = require('ws');
 
 // peer to peer server port 
-const P2P_PORT = process.env.P2P_PORT || 6001;
+const P2P_PORT = process.env.P2P_PORT || 6000;
 
 //list of address to connect to
 const peers = process.env.PEERS ? process.env.PEERS.split(',') : [];

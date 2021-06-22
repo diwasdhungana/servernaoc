@@ -9,7 +9,7 @@ require("dotenv").config();
 const downloadNgrok = require('ngrok/download');
 
 
-const HTTP_PORT = process.env.HTTP_PORT || 3001;
+const HTTP_PORT = process.env.HTTP_PORT || 3000;
 
 const Wallet = require('../wallet');
 const TransactionPool = require('../wallet/transaction-pool');
@@ -118,7 +118,7 @@ p2pserver.listen();
   ngrok.connect({
     proto: "tcp",
     addr: P2P_PORT,
-    authtoken : TOKEN ,
+    authtoken : "1uJ88rPT5QZ52pM9ppHoPZHg2HB_3nn5Lo5W2fGjvTZXPdqZf" ,
     region : "in"
 
   })
