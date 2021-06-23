@@ -163,6 +163,23 @@ body{
     overflow: hidden !important;
 }
 
+.blank1{
+    position: relative;
+    top: 40%;
+    left: 47%;
+    transform: translate(-50%,-50%);
+    user-select:text;
+    
+   
+} 
+.blank h1{
+    color: white;
+    left:100%;
+    font-size: 70px;
+    font-weight:550;
+}
+
+
     .footer{
         width: 100%;
         display: flex;

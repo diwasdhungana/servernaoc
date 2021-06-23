@@ -155,8 +155,8 @@ body{
     overflow-x: hidden;
 }
 .wrapper{
-    background: url(../img/1267600.jpg) no-repeat ;
-    background-size: cover;
+    background: linear-gradient(-45deg,#f795e6,#87dbe6,#9acaf7,#13f5bc, #50b5dd  );
+    background-size:400% 488%;
     height: 100vh;
     max-width: 100%;
     position: relative;
@@ -165,13 +165,24 @@ body{
     justify-content: center;
     flex-flow: column;
     padding: 0 1rem ;
-    overflow: hidden !important;
+    overflow: hidden !important; 
+    animation: change 10s ease-in-out infinite;
+}
 
-    
+@keyframes change{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
 }
 .center{
     position: relative;
-    top: 40%;
+    top: 38%;
     left: 47%;
     transform: translate(-50%,-50%);
     user-select:text;
@@ -192,16 +203,17 @@ body{
     
     color:white;
     left: 50px ;
+    font-size:30px ;
    
 }
 
-.buttons button{
+.center button{
     height: 50px;
     width: 150px;
     font-size: 18px;
     font-weight: bold;
     color: white;
-    background-color: rgb(60, 139, 163);
+    background-color: rgb(238, 98, 98);
     border: 1px;
     outline: none;
     cursor: pointer;
@@ -216,14 +228,13 @@ body{
   .btn{
     margin-left: 15px;
 }
-.buttons button:hover{
+.button:hover{
     background-color: rgb(0, 77, 107);
     border: 1px;
     outline: none;
     cursor: pointer;
     border-radius: 25px;
     letter-spacing: .1rem;
-    text-decoration: underline;
     
 }
 
