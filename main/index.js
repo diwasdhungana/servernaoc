@@ -118,7 +118,7 @@ p2pserver.listen();
 
   ngrok.connect({
     proto: "tcp",
-    addr: P2P_PORT,
+    addr: "6000",
     authtoken : "1uJ88rPT5QZ52pM9ppHoPZHg2HB_3nn5Lo5W2fGjvTZXPdqZf" ,
     region : "in"
 
