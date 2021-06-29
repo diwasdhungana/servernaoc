@@ -155,8 +155,7 @@ body{
     overflow-x: hidden;
 }
 .wrapper{
-    background: linear-gradient(-45deg,#f795e6,#87dbe6,#9acaf7,#13f5bc, #50b5dd  );
-    background-size:400% 488%;
+    background-image: linear-gradient(#ffd89b,#19547b  );
     height: 100vh;
     max-width: 100%;
     position: relative;
@@ -166,20 +165,9 @@ body{
     flex-flow: column;
     padding: 0 1rem ;
     overflow: hidden !important; 
-    animation: change 10s ease-in-out infinite;
+
 }
 
-@keyframes change{
-    0%{
-        background-position: 0 50%;
-    }
-    50%{
-        background-position: 100% 50%;
-    }
-    100%{
-        background-position: 0 50%;
-    }
-}
 .center{
     position: relative;
     top: 38%;

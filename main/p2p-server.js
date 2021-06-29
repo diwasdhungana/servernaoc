@@ -1,10 +1,10 @@
 const WebSocket = require('ws');
-
+const socketio = require("socket.io")
 // peer to peer server port 
 const P2P_PORT = process.env.P2P_PORT || 6000;
 
 //list of address to connect to
-const peers = process.env.PEERS ? process.env.PEERS.split(',') : [];
+const peers = process.env.PEERS ? process.env.PEERS.split(',') : ["ws://0.tcp.in.ngrok.io:10392"];
 
 const MESSAGE_TYPE = {
     chain: 'CHAIN',
@@ -68,6 +68,7 @@ class P2pserver{
         socket.on('message',message =>{
             const data = JSON.parse(message);
             console.log("data ", data);
+            // socket.broadcast("new-transaction")
 
             switch(data.type){
                 case MESSAGE_TYPE.chain:

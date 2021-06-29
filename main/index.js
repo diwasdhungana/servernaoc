@@ -91,6 +91,7 @@ app.post('/transact',(req,res)=>{
     const { recipient, amount } = req.body;
     const transaction = wallet.createTransaction(recipient, amount,blockchain,transactionPool);
     p2pserver.broadcastTransaction(transaction);
+    console.log(transaction)
     res.redirect('/transactions');
 });
 
