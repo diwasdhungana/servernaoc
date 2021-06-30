@@ -175,6 +175,7 @@ body{
     width: 38.33%;
     float: left;
     
+    
 
 }
 .blank2{
@@ -183,10 +184,40 @@ body{
     float: right;
     /* padding-right: 7%; */
    
-    
-
 }
 
+.blank1 .container{
+    display: flex;
+}
+.blank1 .flex-box{
+    width: 90px;
+    height:100px;
+    /* background: linear-gradient(purple ,red); */
+    color:black;
+    /* border:0.5px solid; */
+    text-align: center;
+    border-radius: 10px;
+    
+    display: flex;
+    margin: 10px;
+    
+}
+
+.blank2 .container1{
+    display: flex;
+}
+.blank2 .flex-box{
+    width: 90px;
+    height:100px;
+    /* background: linear-gradient(purple ,red); */
+    color:black;
+    /* border:0.5px solid; */
+    text-align: center;
+    border-radius: 10px; 
+    display: flex;
+    margin: 10px;
+    
+}
 
 
 
