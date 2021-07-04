@@ -42,23 +42,32 @@
          <h4>The most recently mined blocks</h4><br>
         <div class="container">
          <div class="flex-box">
-            Height
-
+            <div class="shorter">Height</div>
+            <div class="shorter">Mined</div>
+            <div class="shorter">Miner</div>
+            <div class="longest">Size</div>
+        </div>
+        <div class="rows" id="rows-1">
+            <div class="row">
+                <div class="height">13412359879</div>
+                <div class="mined">35 min</div>
+                <div class="miner">Ranjit</div>
+                <div class="size">10000000 bytes</div>
+            </div>
+            <div class="row">
+                <div class="height">13412359879</div>
+                <div class="mined">35 min</div>
+                <div class="miner">Rejin</div>
+                <div class="size">10000000 bytes</div>
+            </div>
+            <div class="row">
+                <div class="height">13412359879</div>
+                <div class="mined">35 min</div>
+                <div class="miner">Bijen</div>
+                <div class="size">10000000 bytes</div>
+            </div>
         </div>
 
-        <div class="flex-box">
-            Mined
-        </div>
-
-        <div class="flex-box">
-            Miner
-
-        </div>
-
-        <div class="flex-box">
-            Size
-
-        </div>
 
         </div>
     </div>
@@ -68,23 +77,34 @@
             <h4>The most recently published unconfirmed transactions</h4><br>
             <div class="container1">
                 <div class="flex-box">
-                   Hash
-       
+                   <div class="shorter1">Height</div>
+                   <div class="shorter1">Mined</div>
+                   <div class="shorter1">Miner</div>
+                   <div class="longest1">Size</div>
                </div>
+               <div class="rows2" id="rows-2">
+                   <div class="row1">
+                       <div class="Hash">13412359879</div>
+                       <div class="Time">17:29</div>
+                       <div class="Amount">0.0000 Nao</div>
+                       <div class="Nounce">10000</div>
+                   </div>
+                   <div class="row1">
+                    <div class="Hash">13412359879</div>
+                    <div class="Time">17:29</div>
+                    <div class="Amount">0.0000 Nao</div>
+                    <div class="Nounce">10000</div>
+                </div>
+                <div class="row1">
+                    <div class="Hash">13412359879</div>
+                    <div class="Time">17:29</div>
+                    <div class="Amount">0.0000 Nao</div>
+                    <div class="Nounce">10000</div>
+                </div>
+                   </div>
+              
+            </div>
        
-               <div class="flex-box">
-                   Timestamp
-               </div>
-       
-               <div class="flex-box">
-                   Amount
-       
-               </div>
-       
-               <div class="flex-box">
-                   Nounce
-       
-               </div>
        
                </div>
         </div>
@@ -121,50 +141,16 @@
 
 <!-- read more 1 -->
     <script>
-        $(".readmore-btn").on('click', function(){
-            $(this).parent().toggleClass("showContent");
+        // $(".readmore-btn").on('click', function(){
+        //     $(this).parent().toggleClass("showContent");
 
-            var replaceText = $(this).parent().hasClass("showContent") ? "Read Less" : "Read More";
-            $(this).text(replaceText);
-        });
-
-    </script>
-
-
-
-
-
-
-
-    <script>
-        $(function(){
-            var scroll= $(document).scrollTop();
-            var navHeight = $('.navbar').outerHeight();
-
-            $(window).scroll(function(){
-
-                var scrolled= $(document).scrollTop();
-
-                if(scrolled > navHeight){
-                    $('.navbar').addClass('animate');
-                }else{
-                    $('.navbar').removeClass('animate');
-                }
-
-                if(scrolled > scroll){
-                     $('.navbar').removeClass('sticky');
-
-                }else{
-                    $('.navbar').addClass('sticky');
-                }
-                
-                scroll = $(document).scrollTop();
-            })
-
-        });
+        //     var replaceText = $(this).parent().hasClass("showContent") ? "Read Less" : "Read More";
+        //     $(this).text(replaceText);
+        // });
 
     </script>
 
 <script src="/socket.io/socket.io.js"></script>
+<script src="./js/history.js"></script>
 </body>
 </html>
