@@ -52,9 +52,9 @@ const displayTransaction = (transaction) => {
     const row1 = document.createElement('div');
     row1.classList.add("row1");
     row1.innerHTML = `
-    <div class="hash">${transaction.height}</div>
-    <div class="time">${transaction.mined}</div>
-    <div class="amount">${transaction.miner}</div>
-    <div class="nounce">${transaction.size}</div>`;
+    <div class="hash">${transaction.hash}</div>
+    <div class="time">${transaction.time}</div>
+    <div class="amount">${transaction.amount}</div>
+    <div class="nounce">${transaction.nounce}</div>`;
     rows1.appendChild(row1);
 }
