@@ -72,6 +72,49 @@ app.get('/mine-transactions',(req,res)=>{
     res.redirect('/blocks');
 })
 
+app.get('/xyz', (req, res)=>{
+	const data = [
+		{
+			height: 0,
+			mined: "45 min",
+			miner: "Saurav",
+			size: 1000000
+		},
+    {
+			height: 1,
+			mined: "44 min",
+			miner: "Bijen",
+			size: 1000000
+		},
+		{
+			height: 2,
+			mined: "40 min",
+			miner: "Utsal",
+			size: 1000000
+		},
+		
+    {
+			height: 3,
+			mined: "15 min",
+			miner: "Diwas",
+			size: 1000000
+		},
+		{
+			height: 4,
+			mined: "25 min",
+			miner: "Rejin",
+			size: 1000000
+		},
+		{
+			height: 5,
+			mined: "55 min",
+			miner: "Raney",
+			size: 1000000
+		},
+	]
+	return res.json(data);
+});
+
 // view transaction in the transaction pool
 app.get('/transactions',(req,res)=>{
     res.json(transactionPool.transactions);

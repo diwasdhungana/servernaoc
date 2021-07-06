@@ -19,6 +19,9 @@ body{
     overflow: hidden !important;
     overflow-x: hidden;
 }
+
+/*Checkbutton for burger */
+
 .checkbtn{
     font-size: 30px;
     color: white;
@@ -31,6 +34,8 @@ body{
 #check{
     display: none;
 }
+
+/*Media property for making website functionable in different sizes */
 
 @media (max-width:952px){
   
@@ -108,6 +113,10 @@ body{
     }
 }
 
+
+
+/* Navigation Bar CSS */
+
 .navbar{
     height: 120px;
     width: 100%;
@@ -156,9 +165,10 @@ body{
 }
 
 .navbar ul li a:hover{
-    background: rgb(18, 170, 216);
+    background: white;
+    color: black;
     border-radius: 2px;
-    text-decoration:  underline;
+  
 }
  .center{
     position: relative;
@@ -186,6 +196,9 @@ body{
     align-items: center;
     
 }
+
+
+/* Footer CSS */ 
 
 .footer{
     width: 100%;

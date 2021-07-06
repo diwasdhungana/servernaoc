@@ -17,13 +17,15 @@ class Blockchain{
         this.chain.push(block);
         // const TOTALblockjson = JSON.stringify(this.chain);
         // fs.writeFile("./CHAIN/BLOCKS/BLOCKS.json", TOTALblockjson, 'utf8' , (err , file) =>console.log('updated successsfully to file.'));
-        const blocks = {block1: this.chain[this.chain.length-2], block2: this.chain[this.chain.length-1]}
-        MongoClient.connect("mongodb://localhost/27017", {useNewUrlParser: true, useUnifiedTopology: true}, async(err, client) => {
-            if  (err) throw err;
-            const db=client.db('blockChain')
-            db.collection('blocks').insertOne(blocks) //insert into database
-         }
-             )
+       
+        const dbblocks = {block1:this.chain[this.chain.length-1]}
+        MongoClient.connect("mongodb://127.0.0.1:27017",
+        {useNewUrlParser:true,UnifiedTopology:true},async(err,client)=>{
+            if(err)throw err;
+            const db=client.db("blockChain")
+            db.collection("dbblocks").insertOne(dbblocks)
+            
+        })
         console.log("Data is inserted into database");
         return block;
       }

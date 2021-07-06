@@ -47,7 +47,7 @@ const displayTransaction = (transaction) => {
     <div class="size">${transaction.size}</div>`;
     rows1.appendChild(row);
 }
-const displayTransaction = (transaction) => {
+const displayTransaction1 = (transaction) => {
     const rows1 = document.getElementById("rows-2");
     const row1 = document.createElement('div');
     row1.classList.add("row1");
@@ -58,3 +58,10 @@ const displayTransaction = (transaction) => {
     <div class="nounce">${transaction.nounce}</div>`;
     rows1.appendChild(row1);
 }
+
+fetch("/xyz")
+  .then((resp) => resp.json())
+  .then((response) => response.forEach(x=>displayTransaction(x)))
+  .catch((err) => console.error(err));
+  
+  
