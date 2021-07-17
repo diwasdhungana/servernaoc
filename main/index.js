@@ -7,6 +7,7 @@ const path = require('path')
 const ngrok = require('ngrok');
 require("dotenv").config();
 const downloadNgrok = require('ngrok/download');
+const { MongoClient } = require("mongodb");
 
 
 const HTTP_PORT = process.env.HTTP_PORT || 3000;
@@ -72,48 +73,65 @@ app.get('/mine-transactions',(req,res)=>{
     res.redirect('/blocks');
 })
 
-app.get('/xyz', (req, res)=>{
-	const data = [
-		{
-			height: 0,
-			mined: "45 min",
-			miner: "Saurav",
-			size: 1000000
-		},
-    {
-			height: 1,
-			mined: "44 min",
-			miner: "Bijen",
-			size: 1000000
-		},
-		{
-			height: 2,
-			mined: "40 min",
-			miner: "Utsal",
-			size: 1000000
-		},
-		
-    {
-			height: 3,
-			mined: "15 min",
-			miner: "Diwas",
-			size: 1000000
-		},
-		{
-			height: 4,
-			mined: "25 min",
-			miner: "Rejin",
-			size: 1000000
-		},
-		{
-			height: 5,
-			mined: "55 min",
-			miner: "Raney",
-			size: 1000000
-		},
-	]
-	return res.json(data);
+
+app.get("/xyz", (req, res) => {
+  MongoClient.connect(
+    "mongodb://localhost/27017",
+    { useNewUrlParser: true, useUnifiedTopology: true },
+    async (err, client) => {
+      if (err) throw err;
+      const db = client.db("blockChain");
+      const data = await db.collection("dbtransactions").find().toArray();
+      const data1 = await db.collection("dbblocks").find().toArray();
+      return res.json({data,data1});
+    }
+  );
 });
+
+
+
+// app.get('/xyz', (req, res)=>{
+// 	const data = [
+// 		{
+// 			height: 0,
+// 			mined: "45 min",
+// 			miner: "Saurav",
+// 			size: 1000000
+// 		},
+//     {
+// 			height: 1,
+// 			mined: "44 min",
+// 			miner: "Bijen",
+// 			size: 1000000
+// 		},
+// 		{
+// 			height: 2,
+// 			mined: "40 min",
+// 			miner: "Utsal",
+// 			size: 1000000
+// 		},
+		
+//     {
+// 			height: 3,
+// 			mined: "15 min",
+// 			miner: "Diwas",
+// 			size: 1000000
+// 		},
+// 		{
+// 			height: 4,
+// 			mined: "25 min",
+// 			miner: "Rejin",
+// 			size: 1000000
+// 		},
+// 		{
+// 			height: 5,
+// 			mined: "55 min",
+// 			miner: "Raney",
+// 			size: 1000000
+// 		},
+// 	]
+// 	return res.json(data);
+// });
 
 // view transaction in the transaction pool
 app.get('/transactions',(req,res)=>{
@@ -174,3 +192,4 @@ p2pserver.listen();
     console.error("Error opening ngrok tunnel: ", error);
     process.exitCode = 1;
   })
+

@@ -260,6 +260,14 @@ body{
     min-height: 30px;
     border: 1px solid;
 }
+
+.rows1 .row .miner{
+    white-space: nowrap; 
+  width: 50px; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  border: 1px solid #000000;
+}
 .shorter{
     width: 80px
 }
@@ -268,9 +276,15 @@ body{
 }
 
 
-.longest1{
-    width: 100px
+.longest{
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+   
 }
+
+
 
 .rows2{
     max-height: 200px;
