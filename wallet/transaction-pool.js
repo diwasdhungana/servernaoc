@@ -1,4 +1,5 @@
 const Transaction = require('./transaction.js');
+const {MongoClient} = require('mongodb');
 
 class TransactionPool{
     constructor(){
@@ -22,17 +23,19 @@ class TransactionPool{
         }
         else{
             this.transactions.push(transaction);
-            MongoClient.connect("mongodb://127.0.0.1:27017",
-            {useNewUrlParser:true,UnifiedTopology:true},async(err,client)=>{
-            if(err)throw err;
-            const db=client.db("blockChain")
-            db.collection("dbtransactions").insertOne(transaction)
 
+            //
+
+            MongoClient.connect("mongodb://127.0.0.1:27017",
+                        {useNewUrlParser:true,UnifiedTopology:true},async(err,client)=>{
+                        if(err)throw err;
+                        const db=client.db("blockChain")
+                        db.collection("dbtransactions").insertOne(transaction)
+            
             })
-          }
-        
+
+        }
     }
-    
 
     /**
      * returns a existing transaction from the pool
@@ -61,13 +64,13 @@ class TransactionPool{
             const outputTotal = transaction.outputs.reduce((total,output)=>{
                 return total + output.amount;
             },0)
-            if( transaction.input.amount !== outputTotal ){
-                console.log(`Invalid transaction from ${transaction.input.address}`);
+            if( transaction.input.amount != outputTotal ){
+                console.log(`Invalid transaction from \n${transaction.input.address}`);
                 return;
             }
 
             if(!Transaction.verifyTransaction(transaction)){
-                console.log(`Invalid signature from ${transaction.input.address}`);
+                console.log(`Invalid signature from \n${transaction.input.address}`);
                 return;
             }
 
@@ -77,6 +80,7 @@ class TransactionPool{
 
     clear(){
         this.transactions = [];
+        console.log("!!< TRANSACTION POOL CLEARED >!!");
     }
 }
 

@@ -160,7 +160,7 @@ app.post('/transact',(req,res)=>{
 app.get('/public-key',(req,res)=>{
     //return res.json(wallet.publickey);
     //console.log(req);
-    res.json( { publicKey : wallet.publicKey });
+    res.json( { publicKey : wallet.address });
 })
 
 
@@ -176,11 +176,10 @@ p2pserver.listen();
 
 
 
-
   ngrok.connect({
     proto: "tcp",
-    addr: "6000",
-    authtoken : "1uJ88rPT5QZ52pM9ppHoPZHg2HB_3nn5Lo5W2fGjvTZXPdqZf" ,
+    addr: P2P_PORT,
+    authtoken : TOKEN ,
     region : "in"
 
   })
