@@ -88,6 +88,19 @@ app.get("/xyz", (req, res) => {
   );
 });
 
+app.get("/chart", (req, res) => {
+  MongoClient.connect(
+    "mongodb://localhost/27017",
+    { useNewUrlParser: true, useUnifiedTopology: true },
+    async (err, client) => {
+      if (err) throw err;
+      const db = client.db("blockChain");
+      const data1 = await db.collection("dbtransactions").find().toArray();
+      return res.json({data1});
+    }
+  );
+});
+
 
 
 // app.get('/xyz', (req, res)=>{
