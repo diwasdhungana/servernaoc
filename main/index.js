@@ -201,7 +201,7 @@ p2pserver.listen();
 
   })
   .catch((error) => {
-    console.error("Error opening ngrok tunnel: ", error);
+    console.error("Error opening ngrok tunnel: ", error.message);
     process.exitCode = 1;
   })
 

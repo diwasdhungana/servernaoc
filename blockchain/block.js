@@ -4,7 +4,7 @@ const fs = require('fs');
 const glob = require('glob');
 
 class Block{
-    constructor(timestamp,lastHash,hash,data,nonce,difficulty, noOfTransactions){
+    constructor(timestamp,lastHash,hash,data,nonce,difficulty, noOfTransactions , miner){
         this.timestamp = timestamp;
         this.lastHash = lastHash;
         this.hash = hash;
@@ -12,6 +12,7 @@ class Block{
         this.nonce = nonce;
         this.difficulty = difficulty || DIFFICULTY;
         this.noOftransactions = noOfTransactions;
+        this.miner = miner;
     }
 
     /**
@@ -36,9 +37,9 @@ class Block{
      */
 
     static genesis(){
-        var firstblock = new this('Genesis time','----','f1574-h4gh',[],0,DIFFICULTY);
-        const firstblockjson = JSON.stringify(firstblock);
-        fs.writeFile("./CHAIN/BLOCKS/BLOCKS.json", firstblockjson, 'utf8' , (err , file) =>console.log('saved successsfully to file'));
+        var firstblock = new this('Genesis time','0000','f1574-h4gh',[],0,DIFFICULTY, 1 , 'developer' );
+        const firstblockjson = JSON.stringify(firstblock, 0 , 2 );
+        fs.writeFile("./CHAIN/BLOCKS/naoc.json", firstblockjson, 'utf8' , (err , file) =>console.log('genesis block creater in file.'));
         
         return firstblock;
     }
@@ -47,25 +48,26 @@ class Block{
      * function to create new blocks or to mine new blocks
      */
 
-    static mineBlock(lastBlock,data){
+    static mineBlock(lastBlock,data , lengthofchain){
 
         let hash;
         let timestamp;
         const lastHash = lastBlock.hash;
 
         let { difficulty } = lastBlock;
-
+        let numberoftransactions = data.length; 
+        let miner = data[data.length-1].outputs[0].address;
         let nonce = 0;
         //generate the hash of the block
         do {
             nonce++;
             timestamp = Date.now();
-            difficulty = Block.adjustDifficulty(lastBlock,timestamp);
+            difficulty = Block.adjustDifficulty(lengthofchain);
             hash = Block.hash(timestamp,lastHash,data,nonce,difficulty);
             // checking if we have the required no of leading number of zeros
         } while(hash.substring(0,difficulty) !== '0'.repeat(difficulty));
         
-        return new this(timestamp,lastHash,hash,data,nonce,difficulty);
+        return new this(timestamp,lastHash,hash,data,nonce,difficulty, numberoftransactions , miner );
     }
 
     /**
@@ -90,9 +92,9 @@ class Block{
      * utility function to adjust difficulty
      */
 
-     static adjustDifficulty(lastBlock,currentTime){
-         let { difficulty } = lastBlock;
-         difficulty = lastBlock.timestamp + MINE_RATE > currentTime ? difficulty + 1 : difficulty - 1; 
+     static adjustDifficulty(lengthofchain){
+         let adddiff = Math.floor(lengthofchain/200) 
+        let  difficulty = DIFFICULTY + adddiff;
          return difficulty; 
      }
 
