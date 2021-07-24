@@ -23,7 +23,15 @@ var myChart = new Chart(ctx, {
     }]
   },
   options: {
+    maintainAspectRatio: false,
     scales: {
+      x:{
+        ticks:{
+          callback: function(value){
+            return this.getLabelForValue(value).substr(0,8)
+          }
+        }
+      },
       y: {
         beginAtZero: true
       }
@@ -41,7 +49,7 @@ async function getdata() {
   const data = await response.json()
   
   console.log(data.data1[0].outputs[1])
-  const label1 = data.data1.map((x) => x.outputs[1].address)
+  const label1 = data.data1.map((x) => x.id)
   const data1 = data.data1.map((x) => x.outputs[1].amount)
 
   datalabel=label1;

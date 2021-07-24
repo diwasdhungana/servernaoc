@@ -20,11 +20,18 @@ class TransactionPool{
 
         if(transactionWithId){
             this.transactions[this.transactions.indexOf(transactionWithId)] = transaction;
+            // MongoClient.connect("mongodb://127.0.0.1:27017",
+            // {useNewUrlParser:true,useUnifiedTopology:true},async(err,client)=>{
+            // if(err)throw err;
+            // const db=client.db("blockChain")
+            // db.collection("dbtransactions").insert(transaction)
+
+
         }
         else{
             this.transactions.push(transaction);
 
-            //
+            
 
             MongoClient.connect("mongodb://127.0.0.1:27017",
                         {useNewUrlParser:true,useUnifiedTopology:true},async(err,client)=>{

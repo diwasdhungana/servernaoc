@@ -175,7 +175,8 @@ body{
     /* top: 20%; */
     margin: 10rem 10rem 0rem 10rem;
     border-radius: 10px;
-    background-color: skyblue;
+    height: 100px;
+    background-color: rgb(158, 235, 135);
     
 }
 

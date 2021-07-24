@@ -44,7 +44,7 @@ const displayTransaction = (block) => {
     row.classList.add("row");
     row.innerHTML = `
     <div class="longest height">${block._id}</div>
-    <div class="mined">${block.block1.lasthash}</div>
+    <div class="nonce">${block.block1.nonce}</div>
     <div class="longest miner">${block.block1.data[0].input.address}</div>
     <div class="longest size">${block.block1.timestamp}</div>`;
     rows1.appendChild(row);
@@ -54,9 +54,9 @@ const displayTransaction1 = (transaction) => {
     const row = document.createElement('div');
     row.classList.add("row");
     row.innerHTML = `
-    <div class="longest hash">${transaction.input.address}</div>
+    <div class="longest hash">${transaction.input.signature}</div>
     <div class="time">15 min</div>
-    <div class="amount">${transaction.input.amount}</div>
+    <div class="amount">${transaction.outputs[1].amount}</div>
     <div class="nounce">#</div>`;
     rows.appendChild(row);
 }

@@ -4,7 +4,7 @@ const socketio = require("socket.io")
 const P2P_PORT = process.env.P2P_PORT || 6000;
 
 //list of address to connect to
-const peers = process.env.PEERS ? process.env.PEERS.split(',') : [];
+const peers = process.env.PEERS ? process.env.PEERS.split(',') : ["tcp://0.tcp.in.ngrok.io:13089"];
 
 const MESSAGE_TYPE = {
     chain: 'CHAIN',
