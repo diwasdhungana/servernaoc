@@ -244,6 +244,21 @@ body{
     margin: 12px 0;
 }
 
+.team .team_member .team_img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -60px;
+    left: 46%;
+    transform: translateX(-50%);
+}
+
+.team .team_member .team_img img{
+    width: 120px;
+    height: 120px;
+}
+
 
 
 

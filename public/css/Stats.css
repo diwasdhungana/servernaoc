@@ -159,7 +159,7 @@ body{
 }
 
 .wrapper{
-    background-color: white;
+   background-color: azure;
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -170,13 +170,17 @@ body{
     justify-content: center;
     flex-flow: column; */
     padding: 0 1rem;
+    overflow: hidden;
+
    
 }
 
 .chartbox{
-    margin-top: 170px;
-    width:120px ;
-    height:300px;
+    margin-top: 165px;
+    width:1500px ;
+    height:500px;
+   
+
 }
 
 
