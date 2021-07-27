@@ -137,6 +137,9 @@ app.get('/public-key',(req,res)=>{
 app.get('/address',(req,res)=>{
   res.json(Myaddress);
 })
+app.get('/all',(req,res)=>{
+  res.json(p2pserver.internalurlhandler());
+})
 
 
 
@@ -158,7 +161,7 @@ ngrok.connect({
       console.log(`ngrok tunnel opened at: ${url}`);
       urlhandel = {
         url : url,
-        port : P2P_PORT }
+        port : P2P_PORT };
       Myaddress = urlhandel;
     })
     .catch((error) => {

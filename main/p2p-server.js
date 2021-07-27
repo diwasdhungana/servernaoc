@@ -161,7 +161,7 @@ class P2pserver{
       }
 
       broadcasturlhandler(){
-          this.socket.foreach(socket => {
+          this.sockets.forEach(socket => {
               socket.send(JSON.stringify({
                 type: MESSAGE_TYPE.urlout,
                 urls : AddressURL
@@ -175,9 +175,8 @@ class P2pserver{
           return AddressURL;
       }
 
-internalurlhandler(urlhandel){
-    Myurl = urlhandel;
-    return Myurl;
+internalurlhandler(){
+    return AddressURL;
 }
 
 }
