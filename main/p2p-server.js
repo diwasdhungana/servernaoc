@@ -4,12 +4,16 @@ const socketio = require("socket.io")
 const P2P_PORT = process.env.P2P_PORT || 6000;
 
 //list of address to connect to
-const peers = process.env.PEERS ? process.env.PEERS.split(',') : ["tcp://0.tcp.in.ngrok.io:13089"];
+const peers = process.env.PEERS ? process.env.PEERS.split(',') : [];
+let AddressURL=[];
+let Myurl;
 
 const MESSAGE_TYPE = {
     chain: 'CHAIN',
     transaction: 'TRANSACTION',
-    clear_transactions: 'CLEAR_TRANSACTIONS'
+    clear_transactions: 'CLEAR_TRANSACTIONS',
+    urlin : 'URLIN',
+    urlout : 'URLOUT'
 }
 class P2pserver{
     constructor(blockchain,transactionPool){
@@ -91,6 +95,11 @@ class P2pserver{
                      */
                     this.transactionPool.clear();
                     break;
+                case MESSAGE_TYPE.urlin:
+                    this.broadcasturlhandler();
+                    this.urlhandler(data.url);
+                    break;
+
             }
             
         });
@@ -151,7 +160,25 @@ class P2pserver{
           })
       }
 
+      broadcasturlhandler(){
+          this.socket.foreach(socket => {
+              socket.send(JSON.stringify({
+                type: MESSAGE_TYPE.urlout,
+                urls : AddressURL
+              }))
+          })
+      }
 
+      urlhandler(urlhandel){
+
+          AddressURL.push(urlhandel);
+          return AddressURL;
+      }
+
+internalurlhandler(urlhandel){
+    Myurl = urlhandel;
+    return Myurl;
+}
 
 }
 

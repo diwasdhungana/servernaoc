@@ -16,6 +16,7 @@ const Wallet = require('../wallet');
 const TransactionPool = require('../wallet/transaction-pool');
 const P2P_PORT = process.env.P2P_PORT;
 const TOKEN = process.env.TOKEN;
+let Myaddress ="address";
 
 const app  = express();
 
@@ -103,49 +104,6 @@ app.get("/chart", (req, res) => {
 
 
 
-// app.get('/xyz', (req, res)=>{
-// 	const data = [
-// 		{
-// 			height: 0,
-// 			mined: "45 min",
-// 			miner: "Saurav",
-// 			size: 1000000
-// 		},
-//     {
-// 			height: 1,
-// 			mined: "44 min",
-// 			miner: "Bijen",
-// 			size: 1000000
-// 		},
-// 		{
-// 			height: 2,
-// 			mined: "40 min",
-// 			miner: "Utsal",
-// 			size: 1000000
-// 		},
-		
-//     {
-// 			height: 3,
-// 			mined: "15 min",
-// 			miner: "Diwas",
-// 			size: 1000000
-// 		},
-// 		{
-// 			height: 4,
-// 			mined: "25 min",
-// 			miner: "Rejin",
-// 			size: 1000000
-// 		},
-// 		{
-// 			height: 5,
-// 			mined: "55 min",
-// 			miner: "Raney",
-// 			size: 1000000
-// 		},
-// 	]
-// 	return res.json(data);
-// });
-
 // view transaction in the transaction pool
 app.get('/transactions',(req,res)=>{
     res.json(transactionPool.transactions);
@@ -176,32 +134,35 @@ app.get('/public-key',(req,res)=>{
     res.json( { publicKey : wallet.address });
 })
 
+app.get('/address',(req,res)=>{
+  res.json(Myaddress);
+})
 
 
 
 app.listen(HTTP_PORT,()=>{
     console.log(`listening on port ${HTTP_PORT}`);
 })
-
-// p2p server 
-p2pserver.listen();
-
+ // p2p server 
+ p2pserver.listen();
 
 
-
-  ngrok.connect({
-    proto: "tcp",
-    addr: P2P_PORT,
-    authtoken : TOKEN ,
-    region : "in"
-
-  })
-  .then(url => {
-    console.log(`ngrok tunnel opened at: ${url}`);
-
-  })
-  .catch((error) => {
-    console.error("Error opening ngrok tunnel: ", error.message);
-    process.exitCode = 1;
-  })
+ngrok.connect({
+      proto: "tcp",
+      addr: P2P_PORT,
+      authtoken : TOKEN ,
+      region : "in"
+  
+    })
+    .then(url => {
+      console.log(`ngrok tunnel opened at: ${url}`);
+      urlhandel = {
+        url : url,
+        port : P2P_PORT }
+      Myaddress = urlhandel;
+    })
+    .catch((error) => {
+      console.error("Error opening ngrok tunnel: ", error.message);
+      process.exitCode = 1;
+    })
 
