@@ -1,6 +1,7 @@
 *{
     padding: 0;
-    margin: 0; 
+    margin: 0;
+    box-sizing: border-box; 
 }
 
 /*Checkbutton for burger */
@@ -162,8 +163,8 @@ body{
     overflow-x: hidden;
 }
 .wrapper{
-    background-image: linear-gradient(#ffd89b,#19547b  );
-    height: 100vh;
+    background-image: linear-gradient(#4ca1af , #c4e0e5 );
+    height: 99vh;
     max-width: 100%;
     position: relative;
     text-align: center;
@@ -232,6 +233,95 @@ body{
     letter-spacing: .1rem;
     
 }
+
+.part{
+    background-color: aliceblue;
+}
+
+.part > .heading{
+    padding-top:50px ;
+    padding-bottom:80px ;
+    text-align: center;
+    font-size: 60px;
+}
+
+/* first box starts */
+.box{
+    margin: 2rem 7rem 1rem 8rem;
+    border: 1rem hidden;
+    border-radius: 15px;
+    /* background-color: #c4e0e5; */
+    height: auto;
+    
+   
+}
+.inside{
+    padding: 3rem 1rem 3rem 4rem;
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    flex-wrap: wrap;
+    transition: all 0.2 linear;
+    padding-bottom: 155px;
+}
+
+.inside > .image{
+    flex:1; 
+}
+
+.inside > #image3{
+    padding-left: 70px;
+    filter:drop-shadow(.75em .75em 5em rgb(235, 110, 110)) ; 
+}
+
+.inside > #image2{
+    padding-right: 50px;
+    filter: drop-shadow(.75em .75em 5em rgb(233, 255, 152));
+}
+
+.inside > #image4{
+    /* padding-left: 100px; */
+    filter: drop-shadow(.75em .75em 5em rgb(115, 209, 219));
+}
+
+.inside > #image1{
+    filter: drop-shadow(.75em .75em 5em rgb(111, 245, 129));
+    
+}
+
+    
+.image > img{
+    max-height: 500px; 
+    /* filter:drop-shadow(.75em .75em 5em rgb(235, 110, 110)) ;   */
+   
+}
+    
+.inside > .text{
+    flex: 1;
+    margin-top: 100px;
+
+}  
+    
+.inside .text .para{
+   font-size: 300%;
+   font-weight: 100px;
+}
+.inside .text .para1{
+    line-height: 1.6;
+    word-spacing: 10px;
+    font-size: 150%;
+ }
+ 
+ /* first box end */
+
+
+ /* Second box starts */
+
+ 
+
+ /* Second box end */
+
+
 
 /* Footer CSS */
 
