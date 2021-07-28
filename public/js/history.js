@@ -57,7 +57,7 @@ const displayTransaction1 = (transaction) => {
     <div class="longest hash">${transaction.input.signature}</div>
     <div class="time">${transaction.input.timestamp}</div>
     <div class="amount">${transaction.outputs[1].amount}</div>
-    <div class="nounce">#</div>`;
+    <div class="balance">${transaction.input.amount}</div>`;
     rows.appendChild(row);
 }
 

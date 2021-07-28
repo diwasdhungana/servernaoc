@@ -157,28 +157,34 @@ body{
 /* Body part CSS */
 
 .blank{
-    background-color: white;
+    background-color: rgb(252, 248, 248);
     background-size: cover;
     height: 100vh;
     width: 100%;
-    /* position: relative; */
-    /* text-align: center;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column; */
-    
-    /* padding: 0 1rem; */
+    overflow: hidden;
    
 }
 
  .square{
-    /* position: relative; */
-    /* top: 20%; */
-    margin: 10rem 10rem 0rem 10rem;
+    margin: 8rem 10rem 0rem 10rem;
     border-radius: 10px;
-    height: 100px;
-    background-color: rgb(158, 235, 135);
+    height: auto;
+    background-color: rgb(225, 242, 247);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 2rem 2rem 2rem 2rem;
     
+}
+
+.son{
+    height: auto;
+}
+
+.son img{
+    height: 500px;
+    width:700px;
+    filter: drop-shadow(.75em .75em 5em rgb(111, 245, 129));
 }
 
 /* Footer CSS */
@@ -191,6 +197,7 @@ body{
     padding: 1rem 2rem;
     margin-top: 1rem;
     background: rgba(36, 36, 36);
+    overflow: hidden;
 }
 
 .footer h1{

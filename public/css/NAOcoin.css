@@ -162,7 +162,7 @@ body{
 }
 
 .wrapper{
-    background-color: rgb(120, 228, 238);
+    background-color: rgb(162, 246, 253);
     background-size: cover;
     height: 100vh;
     width:100%;
@@ -191,7 +191,7 @@ body{
 
 .below{
     height: auto;
-    background-color: aquamarine;
+    background-color: rgb(162, 246, 253);
     overflow: hidden;
 
 }
@@ -199,7 +199,7 @@ body{
 .below > .apple{
     margin:1rem 4rem 2rem 4rem;
     padding: 1rem 1rem 1rem 1rem;
-    background-color:blanchedalmond;
+    /* background-color:blanchedalmond; */
     border-radius: 20px;
     height:auto;
    
@@ -228,6 +228,8 @@ body{
     line-height: 20px;
     color: #8e8b8b;  
     position: relative;
+    border-radius: 20px;
+    box-shadow: 5px 10px rgb(32, 32, 32);
 }
 
 .team .team_member h3{
