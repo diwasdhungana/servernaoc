@@ -57,3 +57,26 @@ async function getdata() {
   datalabel=label1;
   datadata=data1;
 }
+
+const myaddress = document.getElementById('MYaddress')
+
+fetch("/address")
+.then(now=>now.json())
+.then(res =>{
+	myaddress.innerText = res.url
+})
+.catch(err=>console.error(err))
+
+
+const alladdress = document.getElementById('ALLaddress')
+const urlarray = [];
+fetch("/all")
+.then(now=>now.json())
+.then(res =>{
+  console.log(res);
+  res.forEach(data=>  urlarray.push(data.url))
+})
+.then(()=>{
+  alladdress.innerText = urlarray;
+})
+.catch(err=>console.error(err))

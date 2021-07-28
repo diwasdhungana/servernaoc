@@ -1,90 +1,10 @@
-[
-  {
-    "timestamp": "Genesis time",
-    "lastHash": "0000",
-    "hash": "f1574-h4gh",
-    "data": [],
-    "nonce": 0,
-    "difficulty": 4,
-    "noOftransactions": 1,
-    "miner": "developer"
-  },
-  {
-    "timestamp": 1627416220989,
-    "lastHash": "f1574-h4gh",
-    "hash": "0000f46d55c07243ffceab40857d506b418090da3bb3270ff3a25ac28f733269",
-    "data": [
-      {
-        "id": "eed39e40-ef45-11eb-8946-ff7df7bf780c",
-        "input": {
-          "timestamp": 1627416220357,
-          "amount": 0,
-          "address": "Blockchain-wallet",
-          "signature": "3045022019ee90c8f3cc5a1038f40fcefb556363543fadd786e16d0d311fd4ec53608139022100c2d8b601295b3ade57be17b8593f3dc07f8b83b428a29e6e201c78cd5286925a"
-        },
-        "outputs": [
-          {
-            "amount": 10,
-            "address": "FakExW58jA2bgxzrzyLQqgBd6x5uKCkSquHwR2f5oysyLs2F8a1cqTdBiR2Rhhqo4SiSuXEGgBSK2EPJW8nWEXQkRZ4ixcbe591tc5cyZN17UkWs2DkSqkzqLNVcNGVzunoQZwu3Xy6bWBcJPNEUiwRiE8DVkkPEKYmkKdF3gJoeJNhzBfGkHjeqST3JtjS2KipEfiTRhs2YA1Yizvy9qsp23ycxDP1Pzft2YYjkNUFW6EKymTw"
-          }
-        ]
-      }
-    ],
-    "nonce": 84558,
-    "difficulty": 4,
-    "noOftransactions": 1,
-    "miner": "FakExW58jA2bgxzrzyLQqgBd6x5uKCkSquHwR2f5oysyLs2F8a1cqTdBiR2Rhhqo4SiSuXEGgBSK2EPJW8nWEXQkRZ4ixcbe591tc5cyZN17UkWs2DkSqkzqLNVcNGVzunoQZwu3Xy6bWBcJPNEUiwRiE8DVkkPEKYmkKdF3gJoeJNhzBfGkHjeqST3JtjS2KipEfiTRhs2YA1Yizvy9qsp23ycxDP1Pzft2YYjkNUFW6EKymTw"
-  },
-  {
-    "timestamp": 1627417439478,
-    "lastHash": "0000f46d55c07243ffceab40857d506b418090da3bb3270ff3a25ac28f733269",
-    "hash": "0000b888f5620cfb2f347fb99bf50b01a3c84b321a7d84b7e1431c601b033129",
-    "data": [
-      {
-        "id": "c436edb0-ef48-11eb-8a3e-8a81051f42d0",
-        "input": {
-          "timestamp": 1627417437355,
-          "amount": 0,
-          "address": "Blockchain-wallet",
-          "signature": "3045022100a95c490c80bc6cdf2cd112822fc7dc8b3690a1ecc987057c738a342427fb2c0402203bbe12790b0a1de4eb8b6c750dfe344b570261589b7e5550750d9f8da1a5a8a1"
-        },
-        "outputs": [
-          {
-            "amount": 10,
-            "address": "FakExW58jA2bgxzrzyLQqgBd6x5uKCkSquHwR2f5oysyLs2F8a1cqTdBiR2Rhhqo4SiSuXEGgBSK2EPJW8nWEXQkRZ4ixcbe591tc5cyZN17UkWs2DkSqkzqLNVcNGVzunoQZwu3Xy6bWBcJPNEUiwRiE8DVkkPEKYmkKdF3gJoeJNhzBfGkHjeqST3JtjS2KipEfiTRhs2YA1Yizvy9qsp23ycxDP1Pzft2YYjkNUFW6EKymTw"
-          }
-        ]
-      }
-    ],
-    "nonce": 258094,
-    "difficulty": 4,
-    "noOftransactions": 1,
-    "miner": "FakExW58jA2bgxzrzyLQqgBd6x5uKCkSquHwR2f5oysyLs2F8a1cqTdBiR2Rhhqo4SiSuXEGgBSK2EPJW8nWEXQkRZ4ixcbe591tc5cyZN17UkWs2DkSqkzqLNVcNGVzunoQZwu3Xy6bWBcJPNEUiwRiE8DVkkPEKYmkKdF3gJoeJNhzBfGkHjeqST3JtjS2KipEfiTRhs2YA1Yizvy9qsp23ycxDP1Pzft2YYjkNUFW6EKymTw"
-  },
-  {
-    "timestamp": 1627417621917,
-    "lastHash": "0000b888f5620cfb2f347fb99bf50b01a3c84b321a7d84b7e1431c601b033129",
-    "hash": "00002cae8f3d91253bd55b8dcdda16c6418f58bed99a68a0d9b487367793d926",
-    "data": [
-      {
-        "id": "321944e0-ef49-11eb-897c-5fd08408bff5",
-        "input": {
-          "timestamp": 1627417621710,
-          "amount": 0,
-          "address": "Blockchain-wallet",
-          "signature": "3045022100d1970f914c4b8f5574d40d9a1ff5eb7d9623d26a84b98f48bd1519c4bc05b3e9022079c5617c9edd1421e260776214457db192bf2cc3d6d6fb104d9667c5edc3cc58"
-        },
-        "outputs": [
-          {
-            "amount": 10,
-            "address": "FakExW58jA2bgxzrzyLQqgBd6x5uKCkSquHwR2f5oysyLs2F8a1cqTdBiR2Rhhqo4SiSuXEGgBSK2EPJW8nWEXQkRZ4ixcbe591tc5cyZN17UkWs2DkSqkzqLNVcNGVzunoQZwu3Xy6bWBcJPNEUiwRiE8DVkkPEKYmkKdF3gJoeJNhzBfGkHjeqST3JtjS2KipEfiTRhs2YA1Yizvy9qsp23ycxDP1Pzft2YYjkNUFW6EKymTw"
-          }
-        ]
-      }
-    ],
-    "nonce": 19817,
-    "difficulty": 4,
-    "noOftransactions": 1,
-    "miner": "FakExW58jA2bgxzrzyLQqgBd6x5uKCkSquHwR2f5oysyLs2F8a1cqTdBiR2Rhhqo4SiSuXEGgBSK2EPJW8nWEXQkRZ4ixcbe591tc5cyZN17UkWs2DkSqkzqLNVcNGVzunoQZwu3Xy6bWBcJPNEUiwRiE8DVkkPEKYmkKdF3gJoeJNhzBfGkHjeqST3JtjS2KipEfiTRhs2YA1Yizvy9qsp23ycxDP1Pzft2YYjkNUFW6EKymTw"
-  }
-]
+{
+  "timestamp": "Genesis time",
+  "lastHash": "0000",
+  "hash": "f1574-h4gh",
+  "data": [],
+  "nonce": 0,
+  "difficulty": 4,
+  "noOftransactions": 1,
+  "miner": "developer"
+}
