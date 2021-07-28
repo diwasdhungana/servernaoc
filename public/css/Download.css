@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&family=Tourney:wght@200&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -118,19 +119,29 @@ body{
     z-index: 99;
 }
 
-.logo{
-    width: 140px;
-    height: auto;
-    padding: 20px;
-    float: left;
-    
+.logo
+{
+    font-family: 'Tourney', cursive;
+    font-size: 50px;
+    text-decoration: none;
+    color: white;
+    line-height: 80px;
+    margin-left: 7%;
+}
 
+.logo:hover 
+{
+    font-size:52px;
+    font-size-adjust: 20px;
+    transition-duration: 0.4s;
+    color: gold;
 }
 
  ul{
     float: right;
     margin-right: 35px;
     background-size: cover;
+    font-family: "Jura", sans-serif;
     
 }
  ul li{
@@ -138,6 +149,7 @@ body{
     margin: 0 20px;
     display: inline-block;
     line-height: 80px;
+    font-family: "Jura", sans-serif;
 }
  ul li a{
     text-decoration: none;
@@ -145,6 +157,7 @@ body{
     font-size: 20px;
     padding: 6px 13px;
     transition: .4s;
+    font-family: "Jura", sans-serif;
 }
 
 .navbar ul li a:hover{
@@ -159,17 +172,26 @@ body{
 .blank{
     background-color: rgb(252, 248, 248);
     background-size: cover;
-    height: 100vh;
+    height: auto;
     width: 100%;
     overflow: hidden;
    
 }
+.row{
+    height: 400px;
+    /* background-color: rgb(125, 242, 250); */
+    display: flex;
+    justify-content: space-between;
+
+    
+}
+
 
  .square{
     margin: 8rem 10rem 0rem 10rem;
     border-radius: 10px;
     height: auto;
-    background-color: rgb(225, 242, 247);
+    background-color: #f8b195;
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
@@ -177,15 +199,50 @@ body{
     
 }
 
-.son{
-    height: auto;
+.box{
+    float: left;
+    width: 40%;
+    padding: 20px;
+    text-align: center;
+  
+}
+.box p{
+    margin: 20px;
+}
+.box button{
+    margin-top: 20px;
+    padding: 10px;
+    border: 2 solid black;
+    border-radius: 10px;
+    background-color: rgb(225, 250, 114);
 }
 
-.son img{
-    height: 500px;
-    width:700px;
-    filter: drop-shadow(.75em .75em 5em rgb(111, 245, 129));
+.box1{
+    
+    background-color: #f67280;
+    box-sizing: border-box;
+    border: 1px dotted black 20px;
+
 }
+
+
+.box2{
+    background-color:#f67280;
+    box-sizing: border-box;
+    border: 1px dotted black 20px;
+    /* background-color: black; */
+}
+
+.install{
+    background-color: salmon;
+    height: 500px;
+}
+.container{
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+}
+
 
 /* Footer CSS */
 

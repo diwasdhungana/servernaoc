@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&family=Tourney:wght@200&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -124,20 +125,29 @@ body{
     top: 0;
     z-index: 99;
 }
+.logo
+{
+    font-family: 'Tourney', cursive;
+    font-size: 50px;
+    text-decoration: none;
+    color: white;
+    line-height: 80px;
+    margin-left: 7%;
+}
 
-.logo{
-    width: 140px;
-    height: auto;
-    padding: 20px;
-    float: left;
-    
-
+.logo:hover 
+{
+    font-size:52px;
+    font-size-adjust: 20px;
+    transition-duration: 0.4s;
+    color: gold;
 }
 
  ul{
     float: right;
     margin-right: 35px;
     background-size: cover;
+    font-family: "Jura", sans-serif;
     
 }
  ul li{
@@ -145,6 +155,7 @@ body{
     margin: 0 20px;
     display: inline-block;
     line-height: 80px;
+    font-family: "Jura", sans-serif;
 }
  ul li a{
     text-decoration: none;
@@ -152,6 +163,7 @@ body{
     font-size: 20px;
     padding: 6px 13px;
     transition: .4s;
+    font-family: "Jura", sans-serif;
 }
 
 .navbar ul li a:hover{
@@ -187,6 +199,11 @@ body{
     padding-bottom: 40px;
     font-size: 50px;
     font-family: 'Allura', cursive;
+}
+
+.inside h2{
+    line-height: 1.6;
+    word-spacing: 15px;
 }
 
 .below{

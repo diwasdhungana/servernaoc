@@ -4,7 +4,7 @@ async function Chartdiagram(){
   await getdata();
 var ctx = document.getElementById('myChart');
 var myChart = new Chart(ctx, {
-  type: 'line',
+  type: 'bar',
   data: {
     labels: datalabel,
     datasets: [{

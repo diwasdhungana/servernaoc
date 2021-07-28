@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&family=Tourney:wght@200&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -24,12 +25,25 @@
 
 @media (max-width:952px){
   
-    .logo{
-        width: 100px;
-        height: 100px;
-        padding: 5px;
-
+    .logo
+    {
+        font-family: 'Tourney', cursive;
+        font-size: 50px;
+        text-decoration: none;
+        color: white;
+        line-height: 80px;
+        margin-left: 7%;
     }
+    
+    .logo:hover 
+    {
+        font-size:52px;
+        font-size-adjust: 20px;
+        transition-duration: 0.4s;
+        color: gold;
+    }
+
+
     .navbar ul li a{
         font-size:  17px ;
     }
@@ -40,12 +54,23 @@
         display: block;
         
     }
-    .logo{
-        width: 100px;
-        height: 100px;
-        padding: 5px;
+    .logo
+{
+    font-family: 'Tourney', cursive;
+    font-size: 50px;
+    text-decoration: none;
+    color: white;
+    line-height: 80px;
+    margin-left: 7%;
+}
 
-    }
+.logo:hover 
+{
+    font-size:52px;
+    font-size-adjust: 20px;
+    transition-duration: 0.4s;
+    color: gold;
+}
     /* body{
         overflow-x: hidden;
         overflow-y:hidee ;
@@ -112,6 +137,7 @@
     top: 0%;
     z-index: 9999;
     
+    
 }
 .navbar.animate{
     top: -120px;
@@ -122,19 +148,29 @@
     z-index: 99;
 }
 
-.logo{
-    width: 140px;
-    height: auto;
-    padding: 20px;
-    float: left;
-    
+.logo
+{
+    font-family: 'Tourney', cursive;
+    font-size: 50px;
+    text-decoration: none;
+    color: white;
+    line-height: 80px;
+    margin-left: 7%;
+}
 
+.logo:hover 
+{
+    font-size:52px;
+    font-size-adjust: 20px;
+    transition-duration: 0.4s;
+    color: gold;
 }
 
  ul{
     float: right;
     margin-right: 35px;
     background-size: cover;
+    font-family: "Jura", sans-serif;
     
 }
  ul li{
@@ -142,6 +178,7 @@
     margin: 0 20px;
     display: inline-block;
     line-height: 80px;
+    font-family: "Jura", sans-serif;
 }
  ul li a{
     text-decoration: none;
@@ -149,6 +186,7 @@
     font-size: 20px;
     padding: 6px 13px;
     transition: .4s;
+    font-family: "Jura", sans-serif;
 }
 
 .navbar ul li a:hover{
@@ -164,7 +202,7 @@ body{
 }
 .wrapper{
     /* background-image: linear-gradient(#4ca1af , #c4e0e5 ); */
-    background-image:url(../img/1267600.jpg);
+    background-image: linear-gradient(to bottom, rgb(135 139 255 / 39%), rgb(27 0 255 / 59%)), url(../img/slide.jpg);
     height: 100vh;
     max-width: 100%;
     position: relative;
@@ -174,6 +212,9 @@ body{
     flex-flow: column;
     padding: 0 1rem ;
     overflow: hidden !important; 
+    background-size: cover;
+    color: white;
+    font-family: "Jura", sans-serif;
 
 }
 
@@ -226,7 +267,7 @@ body{
     margin-left: 15px;
 }
 .button:hover{
-    background-color: rgb(0, 77, 107);
+    background-color: rgb(19, 106, 141);
     border: 1px;
     outline: none;
     cursor: pointer;

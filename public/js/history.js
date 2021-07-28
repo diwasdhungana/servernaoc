@@ -43,7 +43,7 @@ const displayTransaction = (block) => {
     // </div>;
     row.classList.add("row");
     row.innerHTML = `
-    <div class="longest height">${block._id}</div>
+    <div class="longest height">${block.block1.noOftransactions}</div>
     <div class="nonce">${block.block1.nonce}</div>
     <div class="longest miner">${block.block1.miner}</div>
     <div class="longest size">${block.block1.timestamp}</div>`;
