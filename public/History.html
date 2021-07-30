@@ -6,26 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>History</title>
     <link rel="icon" href="./img/bitcoin-bit-coin-money-currency_108540.png">
-    <link rel="stylesheet" href="css/History.css">
+    <link rel="stylesheet" href="css/style.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
    
 </head>
 <body>
-    <nav class ="navbar">
+<section id="top">
+<nav class ="navbar">
+        <a href="index.html" class="logo">NAO</a>
         <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <a class="logo" href="index.html">NAO</a>
-                <ul>
-                    <li><a href="index.html"> Home</a></li>
-                    <li><a href="Stats.html"> Stats</a></li>
-                    <li><a href="History.html"> History</a></li>
-                    <li><a href="NAOcoin.html"> About Us</a></li>
-                    <li><a href="Download.html"> Downloads</a></li>
-                 </ul>
-        </nav>
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+        <ul>
+           <li><a href="index.html"> Home</a></li>
+               <li><a href="Stats.html"> Stats</a></li>
+               <li><a href="History.html"> History</a></li>
+               <li><a href="NAOcoin.html"> About Us</a></li>
+               <li><a href="Download.html"> Downloads</a></li>
+        </ul>      
+</nav>
+</section>
 
+<section id="history">
     <div class="pagehistory">
     
         <div class="blank">
@@ -92,33 +96,43 @@
         </div>
    
     </div>
-    
+<div class="down">
+    <a href="#top"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+</div>
+</section>
       
-    
-            
-
-
-    <section class="footer">
-        <h1>Created by Nao Coin team | all rights reserved.</h1>
-
+<footer>
+        <h2>Created by Nao Coin team | all rights reserved.</h2>
         <div class="icons">
             <a href="https://www.facebook.com/" class="fab fa-facebook-f" target="_blank"></a>
             <a href="https://twitter.com/?lang=en" class="fab fa-twitter" target="_blank"></a>
             <a href="https://www.instagram.com/?hl=en" class="fab fa-instagram" target="_blank"></a>
-
-
         </div>
+</footer>
 
-    </section>
-
-
-
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="jQuery/js/jquery-3.6.0.min.js"> </script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="jQuery/js/jquery-3.6.0.min.js"> </script>
+<script>
+      $(window).scroll(function()
+      {
+        if($(window).scrollTop()>20)
+        {
+          $(".navbar").addClass("navbar-animate")
+        }
+        else
+        {
+          $(".navbar").removeClass("navbar-animate") 
+        }
+         if($(window).scrollTop()>80)
+        {
+          $(".down").fadeIn()
+        }
+        else
+        {
+          $(".down").fadeOut()
+        }
+      })
+</script>
 
 
 <!-- read more 1 -->
@@ -131,6 +145,7 @@
         // });
 
     </script>
+
 
 <!-- <script src="/socket.io/socket.io.js"></script> -->
 <script src="./js/history.js"></script>

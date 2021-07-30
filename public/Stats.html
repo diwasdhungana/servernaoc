@@ -6,104 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stats</title>
     <link rel="icon" href="./img/bitcoin-bit-coin-money-currency_108540.png">
-    <link rel="stylesheet" href="css/Stats.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <body>
-    
-        <nav class ="navbar">
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fas fa-bars"></i>
-            </label>
-            <a class="logo" href="index.html">NAO</a>
-                    <ul>
-                        <li><a href="index.html"> Home</a></li>
-                        <li><a href="Stats.html"> Stats</a></li>
-                        <li><a href="History.html"> History</a></li>
-                        <li><a href="NAOcoin.html"> About Us</a></li>
-                        <li><a href="Download.html"> Downloads</a></li>
-                     </ul>
-            </nav>
 
-             <div class="wrapper" >  
-                
-                <div class="chartbox">
-                    <canvas id="myChart" ></canvas>
-                </div>
-                <div alignment="center" style="text-align: center;">Transaction to Time Graph </div>
-                <div class = "CLASS1">
-                    <br><br>
-                    <label>SERVER ADDRESS :</label> <label id="MYaddress"></label>
-                    <br><br>
-                    <label>CONNECTED ADDRESS :</label> <label id="ALLaddress"></label>
+<section id="top">
+<nav class ="navbar">
+        <a href="index.html" class="logo">NAO</a>
+        <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+        <ul>
+           <li><a href="index.html"> Home</a></li>
+               <li><a href="Stats.html"> Stats</a></li>
+               <li><a href="History.html"> History</a></li>
+               <li><a href="NAOcoin.html"> About Us</a></li>
+               <li><a href="Download.html"> Downloads</a></li>
+        </ul>      
+</nav>
+</section>
 
-                 </div>
-                
-            </div> 
+<section id="content_stats"> 
+    <div class="chartbox">
+            <canvas id="myChart" ></canvas>
+    </div>
+<div alignment="center" style="text-align: center;">Transaction to Time Graph </div>   
+   <div class = "Connection_info">
+      <label>SERVER ADDRESS :</label> <label id="MYaddress"></label>
+      <br>
+      <label>CONNECTED ADDRESS :</label> <label id="ALLaddress"></label>
+   </div>
+</div>
 
+</section>
 
-
-
-           
-           
-
-
-            <section class="footer">
-                <h1>Created by Nao Coin team | all rights reserved.</h1>
-        
-                <div class="icons">
-                    <a href="https://www.facebook.com/" class="fab fa-facebook-f" target="_blank"></a>
-                    <a href="https://twitter.com/?lang=en" class="fab fa-twitter" target="_blank"></a>
-                    <a href="https://www.instagram.com/?hl=en" class="fab fa-instagram" target="_blank"></a>
-        
-                </div>
-        
-            </section>
+<footer>
+        <h2>Created by Nao Coin team | all rights reserved.</h2>
+        <div class="icons">
+            <a href="https://www.facebook.com/" class="fab fa-facebook-f" target="_blank"></a>
+            <a href="https://twitter.com/?lang=en" class="fab fa-twitter" target="_blank"></a>
+            <a href="https://www.instagram.com/?hl=en" class="fab fa-instagram" target="_blank"></a>
+        </div>
+</footer>
    
             
-
-
-
-
-
-
-
-
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-         <script src="jQuery/js/jquery-3.6.0.min.js"> </script>
-        
-
-
-
-        <script>
-                $(function(){
-                    var scroll= $(document).scrollTop();
-                    var navHeight = $('.navbar').outerHeight();
-        
-                    $(window).scroll(function(){
-        
-                        var scrolled= $(document).scrollTop();
-        
-                        if(scrolled > navHeight){
-                            $('.navbar').addClass('animate');
-                        }else{
-                            $('.navbar').removeClass('animate');
-                        }
-        
-                        if(scrolled > scroll){
-                             $('.navbar').removeClass('sticky');
-        
-                        }else{
-                            $('.navbar').addClass('sticky');
-                        }
-                        
-                        scroll = $(document).scrollTop();
-                    })
-        
-                });
-        
-            </script>
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-            <script src="./js/stats.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <script src="jQuery/js/jquery-3.6.0.min.js"> </script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="./js/stats.js"></script>
 </body>
 </html>
