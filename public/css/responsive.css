@@ -1,0 +1,139 @@
+@media (max-width:950px)
+{
+
+/*Navbar Section*/
+#top
+{
+    height: 70px;
+    width: 100%;
+} 
+.checkbtn
+{
+    display: block; 
+}
+nav ul
+{
+    position:fixed ;
+    width: 100%;
+    height: 80%;
+    top: 80px;
+    left: -100%;
+    transition-duration: .3s;
+    background-size: cover;
+    background-color:rgba(0, 0, 0,0.295);
+    backdrop-filter:blur(10px);
+}
+nav ul li
+{
+    display: block;
+    margin: 40px 0px;
+    padding: 1% 20%;
+}
+#check:checked~ul
+{
+left: 0px ;     
+}
+
+.main button
+{
+    margin-top: 10%;
+    margin-left: 2%;
+}
+
+
+/*Index*/
+#content
+{
+    margin-top: 80px;
+}
+
+.main
+{
+    position: relative;
+    top: 38%;
+    left: 47%;
+    transform: translate(-50%,-50%);
+    user-select:text;
+    
+} 
+.main h1
+{
+    left:100%;
+    font-size: 50px;
+    font-weight:550; 
+}
+.main h2
+{
+    font-size:24px ;
+}
+
+.info h2
+{
+    padding-top:50px ;
+    padding-bottom:80px ;
+    font-size: 30px;
+}
+#info h1
+{
+    font-size: 30px;
+    padding: 50px;
+}
+.row_index
+{
+    height: 270px;
+    padding: 8%;
+}
+.col 
+{
+    width: 100%;
+}
+.col img 
+{
+    display: none;
+}
+
+
+/*About Us*/
+.inside h2
+{
+   font-size: 19px;
+   text-align: justify;
+   line-height: 1.2;
+   word-spacing: normal;
+}
+
+/*Downloads*/
+
+.install
+{
+    height: 600px;
+}
+.steps
+{
+    height: 80%;
+}
+
+
+/*Footer section*/
+footer
+{
+    height: 200px;
+}
+footer .col_footer a 
+{
+    padding: 25px;
+    font-size: 18px;
+}
+
+footer h1
+{
+    font-size: 20px;
+}
+
+footer .icons a
+{
+    font-size: 20px;
+    padding: 2% 30%;
+}
+
+}

@@ -512,6 +512,11 @@ body
     margin: 1% 13%;
     padding: 20px;
     box-shadow: 5px 10px 7px 1px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+    flex-wrap: wrap;
 }
 .box h1
 {
@@ -654,106 +659,6 @@ footer .icons a
 
 
 
-@media (max-width:952px){
-  
-    .logo
-    {
-        font-family: 'Tourney', cursive;
-        font-size: 50px;
-        text-decoration: none;
-        color: white;
-        line-height: 80px;
-        margin-left: 7%;
-    }
-    
-    .logo:hover 
-    {
-        font-size:52px;
-        font-size-adjust: 20px;
-        transition-duration: 0.4s;
-        color: gold;
-    }
 
-
-    .navbar ul li a{
-        font-size:  17px ;
-    }
-    
-}
-@media (max-width:858px){
-    .checkbtn{
-        display: block;
-        
-    }
-    .logo
-{
-    font-family: 'Tourney', cursive;
-    font-size: 50px;
-    text-decoration: none;
-    color: white;
-    line-height: 80px;
-    margin-left: 7%;
-}
-
-.logo:hover 
-{
-    font-size:52px;
-    font-size-adjust: 20px;
-    transition-duration: 0.4s;
-    color: gold;
-}
-    /* body{
-        overflow-x: hidden;
-        overflow-y:hidee ;
-    } */
-
-    .navbar{
-        position: fixed;
-        top: 0%;
-    }
-    nav ul{
-        position:fixed ;
-        width: 100%;
-        height: 60vh;
-        top: 120px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-        background-size: cover;
-        background-color:rgba(0, 0, 0,0.295);
-        backdrop-filter:blur(6.5px );
-        
-    }
-     nav ul li{
-        display: block;
-        margin: 40px 0px;
-        line-height: 30px;
-    }
-     nav ul li a{
-        font-size: 100%;
-      
-    }
-  
-    #check:checked~ul{
-    left: 0px ;
-        
-    }
-
-    }
-
-
-
-
-@media (max-width:650px){
-    .footer{
-        flex-flow: column;
-    }
-    .footer h1{
-        text-align: center;
-    }
-    .footer .icons{
-        padding: 2rem 0;
-    }
-}
 
 
