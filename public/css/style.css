@@ -7,19 +7,26 @@
 }
 body
 {
-    background-image: linear-gradient(to bottom, rgb(135 139 255 / 39%), rgb(27 0 255 / 59%)), url(../img/slide.jpg);
+    background-color: grey;
     color: white;
     font-family: "Jura", sans-serif;
     overflow-x: hidden;
 }
+#main
+{
+    background-image: linear-gradient(to bottom, rgb(135 139 255 / 39%), rgb(27 0 255 / 59%)), url(../img/slide.jpg);
+}
+
 /*Navbar Section*/
 #top
 {
     height: 70px;
     width: 100%;
+    color: white;
 } 
 .navbar
 {
+    background-color: #262933;
     width: 100%;
     top: 0%;
     z-index: 9999; 
@@ -31,9 +38,9 @@ body
     font-family: 'Tourney', cursive;
     font-size: 50px;
     text-decoration: none;
-    color: white;
     line-height: 80px;
     margin-left: 7%;
+    color: white;
 }
 .logo:hover 
 {
@@ -137,14 +144,13 @@ body
     font-size: 18px;
     font-weight: bold;
     color: rgb(14, 13, 13);
-    background-color: rgb(160, 230, 248);
+    background-color: white;
     border: 1px;
     outline: none;
     cursor: pointer;
     border-radius: 25px;
     margin-top: 1.5%;
     margin-left: 2%;
-    box-shadow: 0 .3rem .5rem rgba(219, 251, 255 ,.3);
     text-align: center;
     display: inline-block;
     user-select: none;
@@ -155,12 +161,13 @@ body
 }
 .button:hover
 {
-    background-color: rgb(19, 106, 141);
-    border: 1px;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
     outline: none;
     cursor: pointer;
     border-radius: 25px;
-    letter-spacing: .1rem; 
+    transition-duration: .3s;
 }
 
 .info h2
@@ -216,7 +223,7 @@ body
 #content_stats
 {
     height: 84.8vh;
-    background-size: cover;
+    background-image: linear-gradient(180deg,#1c1621 0%,#2c2035 100%);
     position: relative;
     display: flex;
     text-align: left;
@@ -243,7 +250,7 @@ body
 
 .pagehistory
 {
-    background-color: #633535c7;
+    background-image: linear-gradient(180deg,#1c1621 0%,#2c2035 100%);
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -420,22 +427,15 @@ body
     height: auto;
     background-color: #000000d6;
     overflow: hidden;
-}
-.below > .apple
-{
-    margin:1rem 4rem 2rem 4rem;
-    padding: 1rem 1rem 1rem 1rem;
-    /* background-color:blanchedalmond; */
-    border-radius: 20px;
+    padding: 50px;
     height:auto; 
 }
-.below .apple h1{
-    font-family: 'Allura', cursive;
+.below h1{
     font-size: 50px;
     margin-bottom: 60px;
     text-align: center;
 }
-.apple .team
+.team
 {
     display: flex;
     justify-content: center;
@@ -485,17 +485,15 @@ body
 
 .row_downloads
 {
-    margin-top:50px;
     height: 600px;
-    /* background-color: rgb(125, 242, 250); */
-    display: flex;  
+    display: flex;
+    padding: 50px;  
 }
-
 #content_downloads
 {
-    border-radius: 10px;
     height: auto;
-    background-color: transparent;
+    background-image: linear-gradient(180deg,#1c1621 0%,#2c2035 100%);
+    background-position: 50% 50%;
 }
 
 .col-dwn
@@ -509,7 +507,7 @@ body
     height: 450px;
     width: 450px;
     background-color: white;
-    border: 1px solid gold;
+    border: 5px solid black;
     border-radius: 25px;
     margin: 1% 13%;
     padding: 20px;
@@ -545,9 +543,10 @@ body
 }
 .install
 {
-    background-color: transparent;
+    background-color: #00000094;
     height: 500px;
     position: relative;
+    padding: 50px;
 }
 .steps
 {
@@ -579,24 +578,43 @@ body
 /*Footer section*/
 footer
 {
-    height: 30px;
-    background-color: #212121e8;
+    height: 230px;
+    background-color: whitesmoke;
 }
-
+footer .col_footer
+{
+    width: 33%;
+    float: left;
+    text-align: center;
+    color: black;
+}
+footer .col_footer li 
+{
+    list-style: none;
+}
+footer .col_footer a 
+{
+    text-decoration: none;
+    padding: 25px;
+    font-size: 18px;
+    color: black;
+}
 footer h2
 {
-    color: white;
-    letter-spacing: .1rem;
     font-size: 15px;
-    float: left;
     padding: 5px 0px;
+    text-align: center;
+}
 
+footer h1
+{
+    font-size: 30px;
+    padding: 20px;
 }
 
 footer .icons a
 {
-    color: white;
-    float: right;
+    color: black;
     font-size: 20px;
     padding: 5px 25px;
     text-decoration: none;

@@ -42,12 +42,28 @@
 </section>
 
 <footer>
+    <div class="col_footer one">
+    <h1>NAO Coin</h1>
         <h2>Created by Nao Coin team | all rights reserved.</h2>
+    </div>
+    <div class="col_footer two">
+        <h1>Company</h1>
+        <ul>
+           <li><a href="index.html"> Home</a></li>
+               <li><a href="Stats.html"> Stats</a></li>
+               <li><a href="History.html"> History</a></li>
+               <li><a href="NAOcoin.html"> About Us</a></li>
+               <li><a href="Download.html"> Downloads</a></li>
+        </ul>
+    </div>
+<div class="col_footer three">
+    <h1>Socials</h1>
         <div class="icons">
             <a href="https://www.facebook.com/" class="fab fa-facebook-f" target="_blank"></a>
             <a href="https://twitter.com/?lang=en" class="fab fa-twitter" target="_blank"></a>
             <a href="https://www.instagram.com/?hl=en" class="fab fa-instagram" target="_blank"></a>
         </div>
+    </div>
 </footer>
    
             
@@ -55,5 +71,26 @@
  <script src="jQuery/js/jquery-3.6.0.min.js"> </script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="./js/stats.js"></script>
+<script>
+      $(window).scroll(function()
+      {
+        if($(window).scrollTop()>60)
+        {
+          $(".navbar").addClass("navbar-animate")
+        }
+        else
+        {
+          $(".navbar").removeClass("navbar-animate") 
+        }
+         if($(window).scrollTop()>80)
+        {
+          $(".down").fadeIn()
+        }
+        else
+        {
+          $(".down").fadeOut()
+        }
+      })
+</script>
 </body>
 </html>
