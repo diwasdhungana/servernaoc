@@ -4,7 +4,7 @@
 /*Navbar Section*/
 #top
 {
-    height: 70px;
+    height: 80px;
     width: 100%;
 } 
 .checkbtn
@@ -47,15 +47,6 @@ left: 0px ;
     margin-top: 80px;
 }
 
-.main
-{
-    position: relative;
-    top: 38%;
-    left: 47%;
-    transform: translate(-50%,-50%);
-    user-select:text;
-    
-} 
 .main h1
 {
     left:100%;
@@ -86,6 +77,7 @@ left: 0px ;
 .col 
 {
     width: 100%;
+
 }
 .col img 
 {
@@ -110,9 +102,24 @@ left: 0px ;
 }
 .steps
 {
-    height: 80%;
+    height: 90%;
 }
-
+.row_downloads
+{
+    height: auto;
+}
+.col-dwn
+{
+    width: auto;
+}
+.box
+{
+    position: relative;
+    right: 12%;
+    height: 300px;
+    width: 300px;
+    border-radius: 25px;
+}
 
 /*Footer section*/
 footer

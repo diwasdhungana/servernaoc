@@ -14,19 +14,19 @@ body
 }
 #main
 {
-    background-image: linear-gradient(to bottom, rgb(135 139 255 / 39%), rgb(27 0 255 / 59%)), url(../img/slide.jpg);
+    background-image: linear-gradient(to bottom, rgb(0 243 255 / 53%), rgb(0 253 255 / 26%)), url(../img/slide.jpg);
 }
 
 /*Navbar Section*/
 #top
 {
-    height: 70px;
+    height: 80px;
     width: 100%;
     color: white;
 } 
 .navbar
 {
-    background-color: #262933;
+    background-color: #103b44e6;
     width: 100%;
     top: 0%;
     z-index: 9999; 
@@ -90,9 +90,9 @@ body
 .navbar ul li a:hover
 {   
     background-color: whitesmoke;
-    border: 1px solid purple;
+    border: 1px solid #103b44e6;
     border-radius: 20px;
-    color: purple;
+    color: #103b44e6;
     transition-duration: 0.1s;
 }
 
@@ -103,7 +103,8 @@ body
     text-align: center;
 }
 
-.container_index
+
+.main
 {
     max-width: 100%;
     position: relative;
@@ -114,18 +115,10 @@ body
     padding: 10%;
     overflow: hidden !important;
     height: 320px;
-}
-
-.main
-{
-    position: relative;
-    top: 38%;
-    left: 47%;
-    transform: translate(-50%,-50%);
-    user-select:text;
-    
 } 
-.main h1{
+
+.main h1
+{
     color: white;
     left:100%;
     font-size: 70px;
@@ -183,7 +176,7 @@ body
     height: auto;
     padding-top: 60px;
     text-align: center; 
-    background-image: linear-gradient(to bottom, rgb(29 30 31 / 89%), rgb(0 0 0 / 85%)), url(../img/slide.jpg);
+    background-image: linear-gradient(85deg,#007379b5 0%,#17252beb 100%);
 }
 #info h1
 {
@@ -223,7 +216,7 @@ body
 #content_stats
 {
     height: 84.8vh;
-    background-image: linear-gradient(180deg,#1c1621 0%,#2c2035 100%);
+    background-color: white;
     position: relative;
     display: flex;
     text-align: left;
@@ -239,18 +232,19 @@ body
     width:1500px ;
     height:500px;
 }
-.connection_info label
+.Connection_info label
 {
     font-size: 20px;
     font-weight: 600;
     padding: 10px;
+    color: black;
 }
 
 /*History*/
 
 .pagehistory
 {
-    background-image: linear-gradient(180deg,#1c1621 0%,#2c2035 100%);
+    background-image: linear-gradient(262deg,#bbe6e3 0%,#79ccc1 100%);  
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -259,16 +253,19 @@ body
     justify-content: center;
     flex-flow: column;
     overflow: hidden !important;
+    color: black;
 }
 .blank
 {
-    margin: 9% 2% 1% 2%;
+    margin: 4% 2% 1% 2%;
     /* padding-right:7%; */
 } 
-.blank1{
+.blank1
+{
     margin: 4% 2% 1% 2%;
     width: 38.33%;
     float: left;
+    color: black;
 }
 .blank2
 {
@@ -282,11 +279,13 @@ body
 {
     display: flex;
     flex-direction: column;
+    width: 670px;
 }
 .blank1 .flex-box{
     width: 100%;
     height: 40px;
     color:black;
+    font-weight: 600;
     border-radius: 10px;    
     display: flex;
     justify-content: space-between;
@@ -307,6 +306,7 @@ body
     /* text-align: center; */
     border-radius: 10px;    
     display: flex;
+    font-weight: 600;
     /* margin: 10px; */
     justify-content: space-between;
     align-items: center;
@@ -321,11 +321,12 @@ body
 {
     max-height: 200px;
     width: 100%;
-    background-color: paleturquoise;
+    background-color:white;
     display: flex;
     flex-direction: column-reverse;
     flex: 0 1 auto;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 .row
 {
@@ -335,11 +336,14 @@ body
     width: 100%;
     min-height: 30px;
     border: 1px solid;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .rows1 .row .miner
 {
-    white-space: nowrap; 
+  white-space: nowrap; 
   width: 50px; 
   overflow: hidden;
   text-overflow: ellipsis; 
@@ -368,11 +372,12 @@ body
 {
     max-height: 200px;
     width: 100%;
-    background-color: paleturquoise;
+    background-color: white;
     display: flex;
     flex-direction: column-reverse;
     flex: 0 1 auto;
     overflow-y: auto;
+    overflow-x: hidden;
 }   
 .row1{
     display: flex;
@@ -383,7 +388,8 @@ body
     border: 1px solid;
 }
 .shorter1{
-    width: 80px
+    width: 80px;
+    
 }
 .flex-box>div{
     text-align: center;
@@ -393,11 +399,15 @@ body
 /*About Us*/
 .wrapper_aboutus
 {
-    background: #0000007d;
+    background:linear-gradient(179deg,#327184 0%,#1e7d71cc 100%);
     background-size: cover;
     height: 100vh;
     width:100%;
     overflow-x: hidden;
+}
+#content_about
+{
+    background-color: #00d5ff87;
 }
 .center
 {
@@ -409,7 +419,7 @@ body
     user-select:text;
     color: white;
     padding: 0rem 1rem 2rem 3rem;
-    text-align: center;
+    text-align: justify;
 } 
 .inside > .about
 {
@@ -419,8 +429,12 @@ body
 }
 .inside h2
 {
-    line-height: 1.6;
+    line-height: 1.4;
     word-spacing: 15px;
+}
+.inside h1
+{
+    text-align: center;
 }
 .below
 {
@@ -443,6 +457,10 @@ body
     width: auto;
     flex-wrap: wrap;
 }
+.team_img img
+{
+    border-radius: 50%;
+}
 .team .team_member{
     background: #fff;
     margin: 20px;
@@ -461,11 +479,17 @@ body
     font-size: 26px;
     margin-top: 50px;
 }
-.team .team_member p.role{
-    color: #ccc;
-    font-size: 12px;
+.team .team_member p.role
+{
+    color: black;
+    font-size: 16px;
     text-transform: uppercase;
     margin: 12px 0;
+}
+.team .team_member p
+{
+    color: black;
+    font-size: 18px;
 }
 .team .team_member .team_img{
     width: 100px;
@@ -480,6 +504,15 @@ body
     width: 120px;
     height: 120px;
 }
+.team_member .role
+{
+    font-weight: 600;
+    font-size: 15px;
+}
+.team_member .role2
+{
+    font-size: 8px;
+}
 
 /*Downloads*/
 
@@ -487,12 +520,18 @@ body
 {
     height: 600px;
     display: flex;
-    padding: 50px;  
+    padding: 50px; 
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+    flex-wrap: wrap; 
 }
 #content_downloads
 {
     height: auto;
-    background-image: linear-gradient(180deg,#1c1621 0%,#2c2035 100%);
+    background-image: linear-gradient(180deg,#ffffff 0%,#387a94bd 100%);
     background-position: 50% 50%;
 }
 
@@ -509,14 +548,17 @@ body
     background-color: white;
     border: 5px solid black;
     border-radius: 25px;
-    margin: 1% 13%;
+    margin: 1% 10%;
     padding: 20px;
     box-shadow: 5px 10px 7px 1px;
-    display: flex;
     justify-content: center;
-    text-align: center;
-    width: auto;
-    flex-wrap: wrap;
+}
+.box p
+{
+    font-size: 18px;
+    color: black;
+    line-height: 1.4;
+    font-weight: 600;
 }
 .box h1
 {
@@ -548,10 +590,10 @@ body
 }
 .install
 {
-    background-color: #00000094;
     height: 500px;
     position: relative;
     padding: 50px;
+    background-color: #143f46;
 }
 .steps
 {
@@ -577,6 +619,25 @@ body
 {
     font-size: 20px;
     padding: 10px;
+}
+#note 
+{
+    height: 200px;
+    padding: 30px;
+    background-color: white;
+}
+.note h1
+{
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+    color: black;
+}
+.note p
+{
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
 }
 
 

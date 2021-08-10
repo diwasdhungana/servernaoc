@@ -8,6 +8,7 @@
     <link rel="icon" href="./img/bitcoin-bit-coin-money-currency_108540.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
@@ -30,20 +31,20 @@
   
 <section id="content_downloads">
         <div class="row_downloads">
-            <div class="col-dwn one">
+            <div class ="col-dwn one wow bounce" data-wow-offset="7"  data-wow-delay="0.1s">
                 <div class="box box1">
                 <h1>Client Source Code</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta accusantium saepe libero, eligendi, nisi ut odit unde officiis a cumque sit cupiditate, natus in modi atque optio! Iusto, inventore. Minima!</p>
+                <p>This code allows users to carry out transactions between other users.Through this code, a user can genereate his/her public key for carrying out transactions between other users.</p><br><br><br>
                 <button>
                 <a href="https://github.com/Bijen9/Real-NAOcoin" target="_blank" download>Download</a>
                     </button>
                 </div>
             </div>
 
- <div class="col-dwn two">
+ <div class ="col-dwn two wow bounce" data-wow-offset="7"  data-wow-delay="0.2s">
     <div class="box box2">
         <h1>Server Source Code</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic illum, nihil praesentium natus saepe numquam eum repellat mollitia quasi expedita, nostrum facilis repellendus unde cumque totam ducimus provident, doloremque maiores.</p>
+        <p>This server code notifies the user about how the transactions are being processed or carried out transparently. Through this, a user can see how his transactions are being processed. This server code informs about how the blocks are being mined, how transactions are being processed.</p>
         <button>
                 <a href="https://github.com/diwasdhungana/servernaoc" target="_blank" download>
                 Download
@@ -65,9 +66,15 @@
         <li>To send coins, Navigate to transactions and enter recepient address and amount you're willing to send.</li>
         <li>Consider looking at this server site if you're feeling difficulty with anything.</li>
 </ul>
-</div>
 </section>
-
+<section id="note">
+    <div class="note">
+        <h1>Switching Accounts</h1>
+        <p>If a user wants to transfer his/her coins/account from one computer to another, He/She shall only copy the 'private.pem' and 'public.pem' files available in the keys folder to another computer.
+        (Do note: The another PC must have succesful setup of NAO coin project.)</p>
+    </div>    
+</section>
+<hr>
 
 <div class="down">
     <a href="#top"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
@@ -120,6 +127,9 @@
         }
       })
 </script>
-    
+<script src="js/wow.min.js"></script>
+<script>
+              new WOW().init();
+</script>
 </body>
 </html>

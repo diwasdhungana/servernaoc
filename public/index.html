@@ -8,6 +8,7 @@
     <link rel="icon" href="img/bitcoin-bit-coin-money-currency_108540.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    
@@ -17,7 +18,7 @@
 <body> 
 <section id="main">
 <section id="top">
-<nav class ="navbar">
+<nav class ="navbar wow fadeInLeft" data-wow-delay="0.3s">
         <a href="index.html" class="logo">NAO</a>
         <input type="checkbox" id="check">
       <label for="check" class="checkbtn">
@@ -34,23 +35,20 @@
 </section>
 
 <section id="content">
-    <div class = "container_index"> 
-        <div class="main"> 
-            <h1>Best digital coin you can 
-                <br>count on.</h1>
+        <div class="main wow fadeInDown" data-wow-offset="10"  data-wow-delay="0.2s"> 
+            <h1>Best digital coin you <br>can count on.</h1>
             <h2 id="second">"Transactions made easy"</h2>
             <a href="./Download.html">
             <button class="button">Get Started</button>
             </a>
         </div>
-    </div> 
 </section>
 
 
 
 <section id="info">
     <h1>Every feature you need for economic<br>freedom in one digital wallet</h1>
-    <div class="container">
+    <div class="container_index">
     <div class="row_index">
         <div class=" col col-1">
           <div class="text">
@@ -59,18 +57,18 @@
          </div>
         </div>
         <div class="col col-2">
-                <img class="photo" src="./img/BTS.png">
+                <img src="./img/BTS.png" class="wow slideInRight" data-wow-offset="7"  data-wow-delay="0.1s">
         </div>
     </div>
 <hr>
     <div class="row_index">
         <div class=" col col-1">
-            <img class="photo" src="./img/MM.png">
+            <img src="./img/MM.png" class="wow slideInLeft" data-wow-offset="7"  data-wow-delay="0.1s">
         </div>
         <div class="col col-2">
           <div class="text">
             <h2>Manage your spending</h2>
-            <p>Create ‘saving’ and ‘spending’ wallets to organize your funds. Add personal notes to transactions and get a complete history of buys, sells, trades, and spends.Create ‘saving’ and ‘spending’ wallets to organize your funds. Add personal notes to transactions and get a complete history of buys, sells, trades, and spends.</p>
+            <p>Create ‘saving’ and ‘spending’ wallets to organize your funds. Add personal notes to transactions and get a complete history of buys, sells, trades, and spends.</p>
           </div>
         </div>
     </div>
@@ -79,17 +77,17 @@
         <div class=" col col-1">
         <div class="text">
             <h2>Move money freely</h2>
-            <p>Send and receive NaoCoin anytime, anywhere - no questions asked. Take advantage of fully-customizable fees for sending. Create unlimited wallets to support your privacy.Send and receive NaoCoin anytime, anywhere - no questions asked. Take advantage of fully-customizable fees for sending. Create unlimited wallets to support your privacy.</p>
+            <p>Send and receive NaoCoin anytime, anywhere - no questions asked. Take advantage of fully-customizable fees for sending. Create unlimited wallets to support your privacy.</p>
         </div>
         </div>
         <div class="col col-2">
-                <img class="photo" src="./img/MT.png">
+                <img src="./img/MT.png" class="wow slideInRight" data-wow-offset="7" data-wow-delay="0.1s">
         </div>
     </div>
 <hr>
     <div class="row_index">
         <div class=" col col-1">
-            <img class="photo" src="./img/ES.png">
+            <img src="./img/ES.png" class="wow slideInLeft" data-wow-offset="7"  data-wow-delay="0.1s">
         </div>
         <div class="col col-2">
           <div class="text">
@@ -154,7 +152,10 @@
         }
       })
 </script>
-
+    <script src="js/wow.min.js"></script>
+              <script>
+              new WOW().init();
+    </script>
     
 </body>
 

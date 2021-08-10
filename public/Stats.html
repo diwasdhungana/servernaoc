@@ -8,6 +8,7 @@
     <link rel="icon" href="./img/bitcoin-bit-coin-money-currency_108540.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <body>
 
@@ -32,7 +33,7 @@
     <div class="chartbox">
             <canvas id="myChart" ></canvas>
     </div>
-<div alignment="center" style="text-align: center;">Transaction to Time Graph </div>   
+<div alignment="center" style="text-align: center; color: black;">Transaction to Time Graph </div>   
    <div class = "Connection_info">
       <label>SERVER ADDRESS :</label> <label id="MYaddress"></label>
       <br>
@@ -92,6 +93,11 @@
           $(".down").fadeOut()
         }
       })
+</script>
+
+<script src="js/wow.min.js"></script>
+<script>
+        new WOW().init();
 </script>
 </body>
 </html>
