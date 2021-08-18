@@ -240,6 +240,13 @@ body
     color: black;
 }
 
+#ALLaddress{
+    height: 400px;
+    width: 400px;
+    padding: 15px;
+    
+}
+
 /*History*/
 
 .pagehistory

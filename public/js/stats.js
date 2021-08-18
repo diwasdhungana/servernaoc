@@ -69,14 +69,16 @@ fetch("/address")
 
 
 const alladdress = document.getElementById('ALLaddress')
-const urlarray = [];
+const urlarray = ["\n"];
 fetch("/all")
 .then(now=>now.json())
 .then(res =>{
   console.log(res);
-  res.forEach(data=>  urlarray.push(data.url))
+  res.forEach(data=>  urlarray.push(data.url+"\n"))
+  // urlarray.push("\n")
 })
+
 .then(()=>{
-  alladdress.innerText = urlarray;
+  alladdress.innerText =  urlarray;
 })
 .catch(err=>console.error(err))
