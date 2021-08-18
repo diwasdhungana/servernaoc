@@ -18,15 +18,18 @@ class Blockchain{
                      {
                         this.chain = JSON.parse(file);
 
-                        //console.log(this.chain);
-                        let newdbArray = [this.chain];
-                        MongoClient.connect("mongodb://127.0.0.1:27017",
-                        {useNewUrlParser:true,useUnifiedTopology:true},async(err,client)=>{
-                        if(err)throw err.message;
-                        const db=client.db("blockChain");
-                        db.collection("dbblocks").insertMany(newdbArray);
-            
-        })
+                        // console.log(this.chain);
+                        this.chain.forEach(data =>{
+                            let dbcblocks = {block1:data}
+                            MongoClient.connect("mongodb://127.0.0.1:27017",
+                            {useNewUrlParser:true,useUnifiedTopology:true},async(err,client)=>{
+                                if(err)throw err;
+                                const db=client.db("blockChain")
+                                db.collection("dbblocks").insertOne(dbcblocks)
+                                }
+                        )})
+                   
+        
                      }
                      catch(err){
                             console.error(err);
