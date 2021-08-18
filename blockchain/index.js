@@ -19,8 +19,29 @@ class Blockchain{
                         this.chain = JSON.parse(file);
 
                         // console.log(this.chain);
+                        MongoClient.connect("mongodb://127.0.0.1:27017",
+                            {useNewUrlParser:true,useUnifiedTopology:true},async(err,client)=>{
+                                if(err)throw err;
+                                const db=client.db("blockChain")
+                                db.collection("dbblocks")
+                                }
+                        )
+
+
+                        MongoClient.connect("mongodb://127.0.0.1:27017",
+                        {useNewUrlParser:true,useUnifiedTopology:true},async(err,client)=>{
+                             if(err)throw err;
+                            const db=client.db("blockChain")
+                            db.collection("dbblocks").drop(function(err, delOK) {
+                                if (err) throw err;
+                                if (delOK) console.log("Collection deleted");
+                                //db.close();
+                            });
+                            }      
+                        )
+
                         this.chain.forEach(data =>{
-                            let dbcblocks = {block1:data}
+                            let dbcblocks = {block1 : data}
                             MongoClient.connect("mongodb://127.0.0.1:27017",
                             {useNewUrlParser:true,useUnifiedTopology:true},async(err,client)=>{
                                 if(err)throw err;
@@ -52,16 +73,29 @@ class Blockchain{
         let TOTALblockjson = JSON.stringify(this.chain, 0 ,2);
         fs.writeFile("./CHAIN/BLOCKS/naoc.json", TOTALblockjson, 'utf8' , (err , file) =>console.log('updated successsfully to file.'));
         
-        
-        const dbblocks = {block1:this.chain[this.chain.length-1]}
         MongoClient.connect("mongodb://127.0.0.1:27017",
         {useNewUrlParser:true,useUnifiedTopology:true},async(err,client)=>{
-            if(err)throw err;
+             if(err)throw err;
             const db=client.db("blockChain")
-            db.collection("dbblocks").insertOne(dbblocks)
-            
-        })
-        console.log("Blocks have been inserted in database")
+            db.collection("dbblocks").drop(function(err, delOK) {
+                if (err) throw err;
+                if (delOK) console.log("Collection deleted");
+                //db.close();
+            });
+            }      
+        )
+        this.chain.forEach(data =>{
+            let dbcblocks = {block1 : data}
+            MongoClient.connect("mongodb://127.0.0.1:27017",
+            {useNewUrlParser:true,useUnifiedTopology:true},async(err,client)=>{
+                if(err)throw err;
+                const db=client.db("blockChain")
+                db.collection("dbblocks").insertOne(dbcblocks)
+                }
+        )})
+
+
+        // console.log("Blocks have been inserted in database")
 
         return block;
     }
@@ -103,6 +137,27 @@ class Blockchain{
         this.chain = newChain; 
         const TOTALblockjson = JSON.stringify(this.chain, 0 ,2);
         fs.writeFile("./CHAIN/BLOCKS/naoc.json", TOTALblockjson, 'utf8' , (err , file) =>console.log('updated successsfully to file.'));
+        
+        MongoClient.connect("mongodb://127.0.0.1:27017",
+        {useNewUrlParser:true,useUnifiedTopology:true},async(err,client)=>{
+             if(err)throw err;
+            const db=client.db("blockChain")
+            db.collection("dbblocks").drop(function(err, delOK) {
+                if (err) throw err;
+                if (delOK) console.log("Collection deleted");
+               // db.close();
+            });
+            }      
+        )
+        this.chain.forEach(data =>{
+            let dbcblocks = {block1 : data}
+            MongoClient.connect("mongodb://127.0.0.1:27017",
+            {useNewUrlParser:true,useUnifiedTopology:true},async(err,client)=>{
+                if(err)throw err;
+                const db=client.db("blockChain")
+                db.collection("dbblocks").insertOne(dbcblocks)
+                }
+        )})
 
     }
 
